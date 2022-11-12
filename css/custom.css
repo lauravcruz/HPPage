@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "fontLogo";
+  src: url(../fonts/HPfont.TTF);
+}
+@font-face {
+  font-family: "fontBody";
+  src: url(../fonts/Dumbledor.ttf);
+}
+
+:root {
+  --primary: #072451;
+  --secondary: #c39a1c;
+  --brown: #3d2f22;
+  --grey: #717679;
+  --light: #efeee9;
+  --griffindor: #740001;
+  --slytherin: #194529;
+}
+
+body {
+  font-family: "fontBody";
+}
+
+.fontLogo {
+  font-family: "fontLogo";
+  font-size: 2rem;
+}
+
+a:hover {
+    text-shadow: var(--secondary) 1px 0 5px;
+  }
+
+/*Submenú para las casas:*/
+
+/*Quitar padding del submenú*/
+.no-padding {
+  padding: 0;
+  background-color: var(--primary);
+}
+
+/*Hacer que el menú se despliegue con hover*/
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.griffindor {
+  background-color: var(--griffindor);
+  color: var(--secondary);
+}
+
+.griffindor:hover {
+  background-color: var(--secondary);
+  color: var(--griffindor);
+  text-shadow: var(--griffindor) 1px 0 5px;
+}
+.slytherin {
+  background-color: var(--slytherin);
+  color: black;
+}
+
+.slytherin:hover {
+  background-color: black;
+  color: var(--slytherin);
+  text-shadow: var(--slytherin) 1px 0 5px;
+}
+
+#bg-snitch{
+    background-position: center center;
+    height: 100vh;
+    background-attachment: fixed;
+
+}

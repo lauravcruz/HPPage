@@ -10,6 +10,7 @@
 :root {
   --primary: #072451;
   --secondary: #c39a1c;
+  --background: #fcf5e7;
   --brown: #3d2f22;
   --grey: #717679;
   --light: #efeee9;
@@ -23,12 +24,13 @@ body {
 
 .fontLogo {
   font-family: "fontLogo";
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 0.5rem;
 }
 
 a:hover {
-    text-shadow: var(--secondary) 1px 0 5px;
-  }
+  text-shadow: var(--secondary) 1px 0 5px;
+}
 
 /*Submenú para las casas:*/
 
@@ -65,9 +67,90 @@ a:hover {
   text-shadow: var(--slytherin) 1px 0 5px;
 }
 
-#bg-snitch{
-    background-position: center center;
-    height: 100vh;
-    background-attachment: fixed;
+/*animación para cambiar el fondo del juego*/
+#bgSnitch {
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: fondo;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
 
+@keyframes fondo {
+  0% {
+    background-image: url("../img/hg1.jpg");
+  }
+  20% {
+    background-image: url("../img/hg2.jpg");
+  }
+  40% {
+    background-image: url("../img/hg3.jpg");
+  }
+  60% {
+    background-image: url("../img/hg4.jpg");
+  }
+  80% {
+    background-image: url("../img/hg5.jpg");
+  }
+  100% {
+    background-image: url("../img/hg6.jpg");
+  }
+}
+
+#menuSnitch {
+  text-align: center;
+  justify-content: center;
+  background-color: var(--background);
+  color: black;
+  border: double var(--secondary) 0.4rem;
+}
+
+.magicTitle {
+  color: var(--secondary);
+  -webkit-text-stroke: 2px black;
+  font-size: 5rem;
+  animation-name: titulo;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/*Animación para poner el título "en el aire"*/
+@keyframes titulo {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 1rem);
+  }
+}
+
+.btn-hp {
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding-right: 1rem;
+  box-shadow: var(--secondary) 1px 1px 10px 1px;
+}
+
+.btn-hp:hover {
+  text-shadow: var(--secondary) 1px 0 5px;
+  color: var(--background);
+  background-color: var(--secondary);
+  box-shadow: var(--secondary) 1px 1px 10px 1px;
+}
+
+#snitch {
+  position: absolute;
+  visibility: hidden;
+}
+
+#ganadorSnitch{
+  display: none;
+  background-color: var(--background);
+  color: black;
+  border: double var(--secondary) 0.4rem;
+}
+
+#curiosidad{
+  margin-left: 2rem;
 }

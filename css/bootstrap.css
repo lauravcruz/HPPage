@@ -1,8 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "hp";
-  src: url(../fonts/HPfont.TTF);
-}
 
 /*!
  * Bootstrap  v5.2.2 (https://getbootstrap.com/)
@@ -71,7 +67,7 @@
     rgba(255, 255, 255, 0)
   );
   --bs-body-font-family: var(--bs-font-sans-serif);
-  --bs-body-font-size: 1rem;
+  --bs-body-font-size: 2rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
@@ -8420,7 +8416,7 @@ fieldset:disabled .btn {
 .text-secondary {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
-  font-size: x-large;
+  font-size: 1.8rem;
 }
 
 .text-success {

@@ -35,9 +35,17 @@ a:hover {
 /*Submenú para las casas:*/
 
 /*Quitar padding del submenú*/
-.no-padding {
-  padding: 0;
-  background-color: var(--primary);
+.dropdown-menu {
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.dropdown-menu > li:first-child {
+  margin-top: 15px;
+}
+.dropdown-menu > li:last-child {
+  margin-bottom: 15px;
 }
 
 /*Hacer que el menú se despliegue con hover*/
@@ -66,6 +74,8 @@ a:hover {
   color: var(--slytherin);
   text-shadow: var(--slytherin) 1px 0 5px;
 }
+
+/*ATRAPA LA SNITCH*/
 
 /*animación para cambiar el fondo del juego*/
 #bgSnitch {
@@ -98,7 +108,7 @@ a:hover {
   }
 }
 
-#menuSnitch {
+.menu {
   text-align: center;
   justify-content: center;
   background-color: var(--background);
@@ -144,13 +154,68 @@ a:hover {
   visibility: hidden;
 }
 
-#ganadorSnitch{
+#ganadorSnitch {
   display: none;
   background-color: var(--background);
   color: black;
   border: double var(--secondary) 0.4rem;
 }
 
-#curiosidad{
+#curiosidad {
   margin-left: 2rem;
 }
+
+/*PIANO */
+
+.stars{
+  background-image: url("../img/stars.gif");
+  height:auto;
+  padding-top: 1rem;
+  padding-bottom: 10%;
+}
+#teclas {
+  display: none; 
+  margin-top: 10%;
+  background-color: #07255184;
+  padding: 1rem 0;
+  box-shadow: var(--grey) 1px 1px 50px 1px;
+  justify-content: center;
+}
+
+#teclas > * {
+  width: 5%;
+  text-align: center;
+}
+
+.black {
+  height: 10rem;
+  width: 5rem;
+  background-color: black;
+  color: white;
+}
+
+#teclas .white {
+  height: 20rem;
+  background-color: white;
+}
+
+.white:hover,
+.black:hover {
+  box-shadow: var(--secondary) 1px 1px 10px 1px;
+}
+
+#partitura {
+  color: white; 
+  text-shadow: var(--secondary) 1px 0 5px;
+  display:none; 
+  animation-name: titulo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#menuPiano{
+  border: inset var(--secondary) 0.4rem;
+  background-color: #07255148;
+  color: white; 
+}
+

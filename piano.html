@@ -75,40 +75,69 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid align-content-center py-5" id="bgSnitch">
-      <img src="img/snitch.gif" id="snitch" onclick="catchedSnitch()" />
-      <div class="container py-4 menu" id="menuSnitch">
-        <h1 class="magicTitle fontLogo">ATRAPA LA SNITCH DORADA</h1>
-        <img src="img/snitch.gif" />
+    <div class="container-fluid stars">
+      <div class="container menu" id="menuPiano">
+        <h1 class="fontLogo magicTitle text-center">
+          TOCA LA MELODÍA DE Harry Potter
+        </h1>
+        <img src="img/piano.gif" class="py-4" />
         <p>
-          ¿Quieres sentirte como un auténtico buscador?<br />
-          Pon a prueba tus habilidades en este simulador de Quidditch<br />
-          Intenta alcanzar la snitch dorada con el ratón<br />
-          Sé lo más rápido que puedas: huirá de ti cada vez que te acerques<br />
-          Si lo consigues, descubrirás una curiosidad sobre ella
+          Reconócelo: por muy muggle que seas, esa canción pegadiza se ha colado
+          más de una vez en tu cabeza
         </p>
-        <button class="btn-hp fontLogo" onclick="playSnitch()">JUGAR</button>
+        <p>En este juego podrás tocarla a piano incluso sin saber música</p>
+        <button class="btn-hp fontLogo" onclick="startPiano()">JUGAR</button>
       </div>
-      <div class="container py-4" id="ganadorSnitch">
-        <h1 class="magicTitle fontLogo text-center">HAS GANADO</h1>
-        <div class="row">
-          <div class="col-6">
-            <p id="curiosidad"></p>
-          </div>
-          <!--para alinear verticalmente el gif hacemos flex-align item center: -->
-          <div class="col-6 d-flex align-items-center">
-            <img src="img/snitchWin.gif" />
-          </div>
+      <div class="container text-center" id="partitura">
+        <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 La5 Fa#5</p>
+        <p>Mi5 Sol5 Fa#5 Re5 Fa5 Si4</p>
+        <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 Re6 Do#6 Do6</p>
+        <p>La5 Do6 Si5 La#5 Si4 Sol5 Mi5</p>
+        <p>
+          Sol5 Si5 | Sol5 Si5 | Sol5 Do6 | Si5 La#5 | Sol5 Fa#5 Do6 Si5 Si4 Sol5
+          Do6
+        </p>
+        <p>Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6</p>
+        <p>Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6</p>
+        <p>Sol5 Do#6 Do6 Si5 Si4 Sol5 Mi5</p>
+      </div>
+      <div class="m-5" id="teclas">
+        <div class="border border-1 white" onclick="playPiano('Si4')">Si4</div>
+        <div class="border border-1 white" onclick="playPiano('Do5')">Do5</div>
+        <div
+          class="border border-1 black"
+          id="do5"
+          onclick="playPiano('DoSos5')"
+        >
+          Do#5
         </div>
-        <div class="row">
-          <p class="text-center m-2">
-            Descubre más detalles sobre la snitch atrapándola de nuevo:
-          </p>
-          <div class="col-12 text-center">
-            <button class="btn-hp fontLogo" onclick="playSnitch()">
-              JUGAR OTRA VEZ
-            </button>
-          </div>
+        <div class="border border-1 white" onclick="playPiano('Re5')">Re5</div>
+        <div class="border border-1 black" onclick="playPiano('ReSos5')">
+          Re#5
+        </div>
+        <div class="border border-1 white" onclick="playPiano('Mi5')">Mi5</div>
+        <div class="border border-1 white" onclick="playPiano('Fa5')">Fa5</div>
+        <div class="border border-1 black" onclick="playPiano('FaSos5')">
+          Fa#5
+        </div>
+        <div class="border border-1 white" onclick="playPiano('Sol5')">
+          Sol5
+        </div>
+        <div class="border border-1 black" onclick="playPiano('SolSos5')">
+          Sol#5
+        </div>
+        <div class="border border-1 white" onclick="playPiano('La5')">La5</div>
+        <div class="border border-1 black" onclick="playPiano('LaSos5')">
+          La#5
+        </div>
+        <div class="border border-1 white" onclick="playPiano('Si5')">Si5</div>
+        <div class="border border-1 white" onclick="playPiano('Do6')">Do6</div>
+        <div class="border border-1 black" onclick="playPiano('DoSos6')">
+          Do#6
+        </div>
+        <div class="border border-1 white" onclick="playPiano('Re6')">Re6</div>
+        <div class="border border-1 black" onclick="playPiano('ReSos6')">
+          Re#6
         </div>
       </div>
     </div>

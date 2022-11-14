@@ -167,14 +167,14 @@ a:hover {
 
 /*PIANO */
 
-.stars{
+.stars {
   background-image: url("../img/stars.gif");
-  height:auto;
+  height: auto;
   padding-top: 1rem;
   padding-bottom: 10%;
 }
 #teclas {
-  display: none; 
+  display: none;
   margin-top: 10%;
   background-color: #07255184;
   padding: 1rem 0;
@@ -183,13 +183,12 @@ a:hover {
 }
 
 #teclas > * {
-  width: 5%;
   text-align: center;
 }
 
 .black {
   height: 10rem;
-  width: 5rem;
+  width: 3.5rem;
   background-color: black;
   color: white;
 }
@@ -197,6 +196,7 @@ a:hover {
 #teclas .white {
   height: 20rem;
   background-color: white;
+  width: 5rem;
 }
 
 .white:hover,
@@ -205,17 +205,16 @@ a:hover {
 }
 
 #partitura {
-  color: white; 
+  color: white;
   text-shadow: var(--secondary) 1px 0 5px;
-  display:none; 
+  display: none;
   animation-name: titulo;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
-#menuPiano{
+#menuPiano {
   border: inset var(--secondary) 0.4rem;
   background-color: #07255148;
-  color: white; 
+  color: white;
 }
-

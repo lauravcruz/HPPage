@@ -218,3 +218,40 @@ a:hover {
   background-color: #07255148;
   color: white;
 }
+
+/*Carrousel*/
+.carousel-custom {
+  display: flex;
+  flex-direction: column;
+  left: 0; 
+  right: 0;
+  top: 80%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.353);
+  transition: top 1s;
+}
+.carousel-custom p {
+  font-size: 1.5rem;
+  opacity: 0%;
+  transition: opacity 2s ease-in;
+}
+.carousel-custom:hover h1{
+  font-size: 7rem;
+  transition: font-size 2s ease-in-out; 
+}
+.carouselTitle{
+  text-shadow: black 1px 0 2px;
+}
+
+.carousel-custom:hover {
+  top: 60%;
+}
+
+.carousel-custom:hover p {
+  display: block;
+  opacity: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}

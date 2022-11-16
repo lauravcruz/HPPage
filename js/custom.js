@@ -14,6 +14,12 @@ function playSnitch() {
   ganadorSnitch.style.display = "none";
   snitch.style.visibility = "visible";
   bgSnitch.style.cursor = "url('../img/cursor.png'), auto";
+
+  if (screen.width < 960) {
+    bgSnitch.style.height = "80vh";
+  } else {
+    bgSnitch.style.height = "200vh";
+  }
 }
 
 function moveSnitch() {
@@ -24,11 +30,17 @@ function moveSnitch() {
 }
 
 //Cada vez que el ratón "entre" en el gif de la snitch, la movemos (tras 100 ms para que no sea imposible)
-snitch.addEventListener("mouseenter", () =>
-  setTimeout(function () {
+if (screen.width < 960) {
+  while (win == false) {
     moveSnitch();
-  }, 100)
-);
+  }
+} else {
+  snitch.addEventListener("mouseenter", () =>
+    setTimeout(function () {
+      moveSnitch();
+    }, 100)
+  );
+}
 
 function catchedSnitch() {
   snitch.style.visibility = "hidden";

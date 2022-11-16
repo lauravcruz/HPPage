@@ -18,8 +18,9 @@ function playSnitch() {
 
 function moveSnitch() {
   //Generamos posición aleatoria de top y left entre 0% del div y el 95-90 para que no se salga demasiado
+  snitch.style.position = "absolute";
   snitch.style.top = Math.floor(Math.random() * 95) + "%";
-  snitch.style.left = Math.floor(Math.random() * 90) + "%";
+  snitch.style.left = Math.floor(Math.random() * 95) + "%";
 }
 
 //Cada vez que el ratón "entre" en el gif de la snitch, la movemos (tras 100 ms para que no sea imposible)

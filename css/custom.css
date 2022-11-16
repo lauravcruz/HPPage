@@ -32,6 +32,11 @@ a:hover {
   text-shadow: var(--secondary) 1px 0 5px;
 }
 
+/*Menú*/
+.wandToggler {
+  background-image: url("../img/wandtoggle.svg");
+}
+
 /*Submenú para las casas:*/
 
 /*Quitar padding del submenú*/
@@ -71,7 +76,7 @@ a:hover {
 
 .slytherin:hover {
   background-color: black;
-  color: var(--slytherin);
+  color: var(--grey);
   text-shadow: var(--slytherin) 1px 0 5px;
 }
 
@@ -79,7 +84,10 @@ a:hover {
 
 /*animación para cambiar el fondo del juego*/
 #bgSnitch {
-  height: 90vh;
+  width: 100%;
+  height: 100vh;
+  /*Relativa para que cuando la snitch se mueva lo haga dentro de este contenedor*/
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   animation-name: fondo;
@@ -114,12 +122,13 @@ a:hover {
   background-color: var(--background);
   color: black;
   border: double var(--secondary) 0.4rem;
+  font-size: 1rem;
 }
 
 .magicTitle {
   color: var(--secondary);
-  -webkit-text-stroke: 2px black;
-  font-size: 5rem;
+  -webkit-text-stroke: 0.5px black;
+  font-size: 1.7rem;
   animation-name: titulo;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -138,8 +147,8 @@ a:hover {
 .btn-hp {
   background-color: var(--primary);
   color: var(--secondary);
-  padding-right: 1rem;
   box-shadow: var(--secondary) 1px 1px 10px 1px;
+  font-size: 1.5rem;
 }
 
 .btn-hp:hover {
@@ -156,6 +165,7 @@ a:hover {
 
 #ganadorSnitch {
   display: none;
+  font-size: 1.5rem;
   background-color: var(--background);
   color: black;
   border: double var(--secondary) 0.4rem;
@@ -219,11 +229,11 @@ a:hover {
   color: white;
 }
 
-/*Carrousel*/
+/*CAROUSEL*/
 .carousel-custom {
   display: flex;
   flex-direction: column;
-  left: 0; 
+  left: 0;
   right: 0;
   top: 80%;
   height: 100%;
@@ -235,11 +245,11 @@ a:hover {
   opacity: 0%;
   transition: opacity 2s ease-in;
 }
-.carousel-custom:hover h1{
+.carousel-custom:hover h1 {
   font-size: 7rem;
-  transition: font-size 2s ease-in-out; 
+  transition: font-size 2s ease-in-out;
 }
-.carouselTitle{
+.carouselTitle {
   text-shadow: black 1px 0 2px;
 }
 
@@ -254,4 +264,33 @@ a:hover {
 
 h1 {
   font-size: 2rem;
+}
+
+/*FOOTER*/
+
+/*RESPONSIVE*/
+@media (min-width: 576px) {
+  .menu {
+    font-size: 2rem;
+  }
+  .magicTitle {
+    font-size: 5rem;
+    -webkit-text-stroke: 2px black;
+  }
+
+  #bgSnitch {
+    height: 85vh;
+  }
+
+  .btn-hp {
+    font-size: 3rem;
+  }
+
+  .btn-hp:hover {
+    text-shadow: var(--secondary) 1px 0 5px;
+  }
+
+  #ganadorSnitch {
+    font-size: 2rem;
+  }
 }

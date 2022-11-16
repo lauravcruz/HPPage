@@ -14,7 +14,7 @@
     <script defer src="js/custom.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
       <div class="container">
         <a class="navbar-brand text-secondary fontLogo" href="index.html"
           >Harry Potter</a
@@ -63,10 +63,7 @@
                 aria-expanded="false"
                 >Descubre las casas</a
               >
-              <div
-                class="dropdown-menu no-padding"
-                aria-labelledby="dropdownId"
-              >
+              <div class="dropdown-menu py-0" aria-labelledby="dropdownId">
                 <a class="dropdown-item griffindor" href="#">Griffindor</a>
                 <a class="dropdown-item slytherin" href="#">Slytherin</a>
               </div>
@@ -75,42 +72,46 @@
         </div>
       </div>
     </nav>
-    <div class="container-fluid align-content-center py-5" id="bgSnitch">
-      <img src="img/snitch.gif" id="snitch" onclick="catchedSnitch()" />
-      <div class="container py-4 menu" id="menuSnitch">
-        <h1 class="magicTitle fontLogo">ATRAPA LA SNITCH DORADA</h1>
-        <img src="img/snitch.gif" />
-        <p>
-          ¿Quieres sentirte como un auténtico buscador?<br />
-          Pon a prueba tus habilidades en este simulador de Quidditch<br />
-          Intenta alcanzar la snitch dorada con el ratón<br />
-          Sé lo más rápido que puedas: huirá de ti cada vez que te acerques<br />
-          Si lo consigues, descubrirás una curiosidad sobre ella
-        </p>
-        <button class="btn-hp fontLogo" onclick="playSnitch()">JUGAR</button>
-      </div>
-      <div class="container py-4" id="ganadorSnitch">
-        <h1 class="magicTitle fontLogo text-center">HAS GANADO</h1>
-        <div class="row">
-          <div class="col-6">
-            <p id="curiosidad"></p>
-          </div>
-          <!--para alinear verticalmente el gif hacemos flex-align item center: -->
-          <div class="col-6 d-flex align-items-center">
-            <img src="img/snitchWin.gif" />
-          </div>
-        </div>
-        <div class="row">
-          <p class="text-center m-2">
-            Descubre más detalles sobre la snitch atrapándola de nuevo:
+      <div class="container-fluid align-content-center py-5" id="bgSnitch">
+        <img src="img/snitch.gif" id="snitch" onclick="catchedSnitch()" />
+        <div class="container py-4 menu" id="menuSnitch">
+          <h1 class="magicTitle fontLogo">ATRAPA LA SNITCH DORADA</h1>
+          <img src="img/snitch.gif" />
+          <p>
+            ¿Quieres sentirte como un auténtico buscador?<br />
+            Pon a prueba tus habilidades en este simulador de Quidditch<br />
+            Intenta alcanzar la snitch dorada con el ratón<br />
+            Sé lo más rápido que puedas: huirá de ti cada vez que te acerques<br />
+            Si lo consigues, descubrirás una curiosidad sobre ella
           </p>
-          <div class="col-12 text-center">
-            <button class="btn-hp fontLogo" onclick="playSnitch()">
-              JUGAR OTRA VEZ
-            </button>
+          <button class="btn-hp fontLogo" onclick="playSnitch()">JUGAR</button>
+        </div>
+        <div class="container py-4" id="ganadorSnitch">
+          <h1 class="magicTitle fontLogo text-center">HAS GANADO</h1>
+          <div class="row">
+            <div class="col-6">
+              <p id="curiosidad"></p>
+            </div>
+            <!--para alinear verticalmente el gif hacemos flex-align item center: -->
+            <div class="col-6 d-flex align-items-center">
+              <img src="img/snitchWin.gif" />
+            </div>
+          </div>
+          <div class="row">
+            <p class="text-center m-2">
+              Descubre más detalles sobre la snitch atrapándola de nuevo:
+            </p>
+            <div class="col-12 text-center">
+              <button class="btn-hp fontLogo" onclick="playSnitch()">
+                JUGAR OTRA VEZ
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <footer class = "container-fluid bg-primary d-flex justify-content-center">
+      <p class ="text-secondary">Harry Potter Page</p>
+    </footer>
   </body>
 </html>

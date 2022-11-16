@@ -125,6 +125,10 @@ a:hover {
   font-size: 1rem;
 }
 
+.none{
+  display: none; 
+}
+
 .magicTitle {
   color: var(--secondary);
   -webkit-text-stroke: 0.5px black;
@@ -160,20 +164,14 @@ a:hover {
 
 #snitch {
   position: absolute;
-  visibility: hidden;
 }
 
-#ganadorSnitch {
-  display: none;
-  font-size: 1.5rem;
-  background-color: var(--background);
-  color: black;
-  border: double var(--secondary) 0.4rem;
-}
+
 
 #curiosidad {
   margin-left: 2rem;
 }
+
 
 /*PIANO */
 
@@ -250,6 +248,11 @@ a:hover {
   text-shadow: black 1px 0 2px;
 }
 
+.titleFriday {
+  color: var(--grey);
+  text-shadow: black 3px 0 2px;
+}
+
 /*FOOTER*/
 
 /*RESPONSIVE*/
@@ -258,34 +261,43 @@ a:hover {
   .carousel-custom {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     left: 0;
     right: 0;
     top: 80%;
     height: 100%;
+    margin-top: 0; 
     background-color: rgba(0, 0, 0, 0.353);
-    transition: top 1s;
+    transition: top 1s;    
   }
+
+  .carousel-custom:hover {
+    top: 0; 
+    justify-content: center;
+  }
+
   .carousel-custom p {
     font-size: 1.5rem;
     opacity: 0%;
     transition: opacity 2s ease-in;
-  }
-  .carousel-custom:hover h1 {
-    font-size: 7rem;
-    transition: font-size 2s ease-in-out;
-  }
-  .carouselTitle {
-    text-shadow: black 1px 0 2px;
-  }
-
-  .carousel-custom:hover {
-    top: 60%;
   }
 
   .carousel-custom:hover p {
     display: block;
     opacity: 100%;
   }
+
+  .carouselTitle {
+    text-shadow: black 1px 0 2px;
+  }
+
+  .carousel-custom:hover h1 {
+    font-size: 7rem;
+    
+    transition: font-size 2s ease-in-out;
+  }
+
+  /*MENÚ SNITCH*/
 
   .menu {
     font-size: 2rem;
@@ -296,7 +308,7 @@ a:hover {
   }
 
   #bgSnitch {
-    height: 85vh;
+    height: 100%;
   }
 
   .btn-hp {

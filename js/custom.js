@@ -1,7 +1,6 @@
 let menuSnitch = document.getElementById("menuSnitch");
 let snitch = document.getElementById("snitch");
 let bgSnitch = document.getElementById("bgSnitch");
-
 let curiosidades = [
   "La snitch tiene su origen en la cacería de snidgets dorados, animales similares a la actual pelota alada. En 1929 fueron insertados en el juego de Quidditch por el presidente del Consejo de Magos, Barberus Bragge, diciendo que regalaría 150 galeones (un millón de galeones en la actualidad) al que lograra atraparla en el transcurso del juego",
   "El mago Bowman Wright del Valle de Godric inventó la snitch (o snitch dorada), la cual reemplazaría al 'snidget dorado', la única diferencia de ésta respecto a las demás es que fue hechizada para que se mueva solamente dentro del campo de juego; y desde entonces ésta es la que prevalece hasta nuestros días.",
@@ -10,41 +9,40 @@ let curiosidades = [
 ];
 
 function playSnitch() {
-  menuSnitch.style.display = "none";
-  ganadorSnitch.style.display = "none";
-  snitch.style.visibility = "visible";
+  menuSnitch.classList.add("none");
+  snitch.removeAttribute("hidden");
   bgSnitch.style.cursor = "url('../img/cursor.png'), auto";
+  alert(screen.height);
 
   if (screen.width < 960) {
-    bgSnitch.style.height = "80vh";
+    //Para el móvil, el juego es diferente: la snitch se mueve sola cada 400ms
+    
+    bgSnitch.style.height = screen.height + "px";
+    setInterval(function () {
+      moveSnitch();
+    }, 400);
   } else {
-    bgSnitch.style.height = "200vh";
+    bgSnitch.style.height = screen.height + "px";
   }
 }
 
 function moveSnitch() {
   //Generamos posición aleatoria de top y left entre 0% del div y el 95-90 para que no se salga demasiado
-  snitch.style.position = "absolute";
   snitch.style.top = Math.floor(Math.random() * 95) + "%";
-  snitch.style.left = Math.floor(Math.random() * 95) + "%";
+  snitch.style.left = Math.floor(Math.random() * 70) + "%";
 }
-
 //Cada vez que el ratón "entre" en el gif de la snitch, la movemos (tras 100 ms para que no sea imposible)
-if (screen.width < 960) {
-  while (win == false) {
+snitch.addEventListener("mouseenter", () =>
+  setTimeout(function () {
     moveSnitch();
-  }
-} else {
-  snitch.addEventListener("mouseenter", () =>
-    setTimeout(function () {
-      moveSnitch();
-    }, 100)
-  );
-}
+  }, 100)
+);
 
 function catchedSnitch() {
-  snitch.style.visibility = "hidden";
-  ganadorSnitch.style.display = "block";
+  snitch.classList.add("none"); 
+  let ganadorSnitch = document.getElementById("ganadorSnitch");
+  ganadorSnitch.classList.remove("none");
+  bgSnitch.style.height = "100%"; 
   document.getElementById("curiosidad").innerHTML =
     curiosidades[Math.floor(Math.random() * (4 - 0))];
 }

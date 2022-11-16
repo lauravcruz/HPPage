@@ -234,46 +234,59 @@ a:hover {
 .carousel-custom {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   left: 0;
   right: 0;
-  top: 80%;
+  top: 0;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.353);
   transition: top 1s;
 }
 .carousel-custom p {
-  font-size: 1.5rem;
-  opacity: 0%;
-  transition: opacity 2s ease-in;
+  font-size: 0.8rem;
 }
-.carousel-custom:hover h1 {
-  font-size: 7rem;
-  transition: font-size 2s ease-in-out;
-}
+
 .carouselTitle {
   text-shadow: black 1px 0 2px;
-}
-
-.carousel-custom:hover {
-  top: 60%;
-}
-
-.carousel-custom:hover p {
-  display: block;
-  opacity: 100%;
-}
-
-h1 {
-  font-size: 2rem;
 }
 
 /*FOOTER*/
 
 /*RESPONSIVE*/
-@media (min-width: 576px) {
-  .carousel-inner{
-    height: 85vh;
+@media (min-width: 1025px) {
+  /*CAROUSEL*/
+  .carousel-custom {
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.353);
+    transition: top 1s;
   }
+  .carousel-custom p {
+    font-size: 1.5rem;
+    opacity: 0%;
+    transition: opacity 2s ease-in;
+  }
+  .carousel-custom:hover h1 {
+    font-size: 7rem;
+    transition: font-size 2s ease-in-out;
+  }
+  .carouselTitle {
+    text-shadow: black 1px 0 2px;
+  }
+
+  .carousel-custom:hover {
+    top: 60%;
+  }
+
+  .carousel-custom:hover p {
+    display: block;
+    opacity: 100%;
+  }
+
   .menu {
     font-size: 2rem;
   }
@@ -297,4 +310,7 @@ h1 {
   #ganadorSnitch {
     font-size: 2rem;
   }
+}
+
+@media (min-width: 576px) {
 }

@@ -32,14 +32,13 @@ a:hover {
   text-shadow: var(--secondary) 1px 0 5px;
 }
 
-/*Menú*/
+/*MENÚ*/
 .wandToggler {
   background-image: url("../img/wandtoggle.svg");
 }
 
 /*Submenú para las casas:*/
 
-/*Quitar padding del submenú*/
 .dropdown-menu {
   padding-top: 0;
   padding-bottom: 0;
@@ -80,12 +79,47 @@ a:hover {
   text-shadow: var(--slytherin) 1px 0 5px;
 }
 
+/*CAROUSEL*/
+
+.carousel-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.353);
+  transition: top 1s;
+}
+.carousel-custom p {
+  font-size: 0.8rem;
+}
+
+.carouselTitle {
+  text-shadow: black 1px 0 2px;
+}
+
+.carouselTitle h1 {
+  font-size: 2rem;
+  text-shadow: black 1px 0 2px;
+}
+
+.titleFriday {
+  color: var(--grey);
+  text-shadow: black 3px 0 2px;
+}
+
+/* HOMEPAGE*/
+.home {
+  padding: 2rem;
+}
+
 /*ATRAPA LA SNITCH*/
 
 /*animación para cambiar el fondo del juego*/
 #bgSnitch {
   width: 100%;
-  height: 89vh;
   /*Relativa para que cuando la snitch se mueva lo haga dentro de este contenedor*/
   position: relative;
   background-size: cover;
@@ -117,12 +151,16 @@ a:hover {
 }
 
 .menu {
-  text-align: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   background-color: var(--background);
   color: black;
   border: double var(--secondary) 0.4rem;
   font-size: 1rem;
+}
+
+.menu > * {
+  margin: 0.5rem;
 }
 
 .none {
@@ -153,6 +191,7 @@ a:hover {
   color: var(--secondary);
   box-shadow: var(--secondary) 1px 1px 10px 1px;
   font-size: 1.5rem;
+  padding-right: 0.5rem;
 }
 
 .btn-hp:hover {
@@ -174,16 +213,20 @@ a:hover {
   margin-left: 2rem;
 }
 
+.alturaFija {
+  /*Cuando el fondo de imágenes esté vacío, le daremos una altura fija: */
+  height: 89vh;
+}
+
 /*PIANO */
 
 .stars {
   background-image: url("../img/stars.gif");
-  height: auto;
+  height: 89vh;
   padding-top: 1rem;
   padding-bottom: 10%;
 }
 #teclas {
-  display: none;
   margin-top: 10%;
   background-color: #07255184;
   padding: 1rem 0;
@@ -216,7 +259,6 @@ a:hover {
 #partitura {
   color: white;
   text-shadow: var(--secondary) 1px 0 5px;
-  display: none;
   animation-name: titulo;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -228,36 +270,32 @@ a:hover {
   color: white;
 }
 
-/*CAROUSEL*/
+/*HOUSES*/
 
-.carousel-custom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.353);
-  transition: top 1s;
+.houses .row:nth-child(1){
+  background-image: url(/img/prueba.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
 }
-.carousel-custom p {
-  font-size: 0.8rem;
+.lema{
+  font-family: "fontLogo";
+  font-size: 1rem;
+  margin-top: 2rem; 
+  text-shadow: yellow 1px 1px 2px;
 }
 
-.carouselTitle {
-  text-shadow: black 1px 0 2px;
+.houses > * {
+  margin: 1.5rem;
 }
 
-.carouselTitle h1 {
-  font-size: 2rem;
-  text-shadow: black 1px 0 2px;
+.houses > div:first-child{
+  border-radius: 5rem;
 }
 
-.titleFriday {
-  color: var(--grey);
-  text-shadow: black 3px 0 2px;
-}
+.escudo{
+  width: 34%;
+} 
 
 /*FOOTER*/
 
@@ -302,6 +340,21 @@ a:hover {
     transition: font-size 2s ease-in-out;
   }
 
+  /*HOMEPAGE*/
+
+  .home .row > * {
+    padding: 0;
+  }
+
+  .row:nth-child(2) {
+    border: var(--brown) double 0.3rem;
+    border-bottom: 0;
+  }
+  .row:nth-child(3) {
+    border: var(--brown) double 0.3rem;
+    border-top: 0;
+  }
+
   /*MENÚ SNITCH*/
 
   .menu {
@@ -314,6 +367,7 @@ a:hover {
 
   .btn-hp {
     font-size: 3rem;
+    padding-right: 1rem;
   }
 
   .btn-hp:hover {
@@ -322,7 +376,23 @@ a:hover {
 
   #ganadorSnitch {
     font-size: 2rem;
+    flex-direction: column;
   }
+
+  /*HOUSES*/
+
+  .houses > * {
+    margin: 1.5rem;
+  }
+
+  .lema{
+    font-size: 3rem; 
+  }
+
+  .escudo{
+    width: auto;
+  }
+
 }
 
 @media (min-width: 576px) {

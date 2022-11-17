@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap carouselContainer</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script defer src="js/bootstrap.bundle.js"></script>
+    <script defer src="js/custom.js"></script>
+  </head>
+  <body>
+    <!--navbar: está diseñado para móvil. Con expand-lg le indicamos que en ordenador se expanda el menú--->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-secondary fontLogo" href="index.html"
+          >Harry Potter</a
+        >
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-secondary"
+                href="piano.html"
+                aria-current="page"
+                >Piano<span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-secondary"
+                href="#"
+                aria-current="page"
+                >Trucos<span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="snitch.html"
+                >Atrapa la snitch dorada</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-secondary"
+                href="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Descubre las casas</a
+              >
+              <div class="dropdown-menu py-0" aria-labelledby="dropdownId">
+                <a class="dropdown-item griffindor" href="#">Griffindor</a>
+                <a class="dropdown-item slytherin" href="#">Slytherin</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <img src="img/griffindor.jpg" class="img-fluid w-100" />
+    <div class="container-fluid d-grid houses">
+      <div
+        class="row d-flex justify-content-center align-items-center flex-row py-lg-5 py-sm-3"
+      >
+        <img src="img/escudoG.png" class="col-lg-4 col-sm-12 escudo" />
+        <p class="col-8 text-center lema text-secondary">
+          «Puedes pertenecer a Gryffindor, donde habitan los valientes. <br />Su
+          osadía, temple y caballerosidad ponen aparte a los de Gryffindor.»
+        </p>
+      </div>
+      <div class="row m-0 p-5">
+        <p class="col-8">
+          Gryffindor es una de las cuatro casas del Colegio Hogwarts de Magia y
+          Hechicería. Su animal emblemático es el león y sus colores son el rojo
+          escarlata y el dorado. Las principales características de los
+          Gryffindor son el coraje y la caballerosidad.
+        </p>
+
+        <p class="col-4 p-0">
+          Gryffindor es una de las cuatro casas del Colegio Hogwarts de Magia y
+          Hechicería. Su animal emblemático es el león y sus colores son el rojo
+          escarlata y el dorado. Las principales características de los
+          Gryffindor son el coraje y la caballerosidad.
+        </p>
+      </div>
+    </div>
+    <footer class="container-fluid bg-primary d-flex justify-content-center">
+      <p class="text-secondary">Harry Potter Page</p>
+    </footer>
+  </body>
+</html>

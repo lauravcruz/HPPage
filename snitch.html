@@ -72,17 +72,18 @@
         </div>
       </div>
     </nav>
-    
-    <div class="container-fluid align-content-center py-5" id="bgSnitch">
+
+    <div class="container-fluid align-content-center py-5 text-center" id="bgSnitch">
       <img
         src="img/snitch.gif"
         id="snitch"
-        class = "none"; 
+        class="none"
+        ;
         onclick="catchedSnitch()"
       />
-      <div class="container py-4 menu" id="menuSnitch">
+      <div class="container py-4 menu h-100" id="menuSnitch">
         <h1 class="magicTitle fontLogo">ATRAPA LA SNITCH DORADA</h1>
-        <img src="img/snitch.gif" />
+        <div><img src="img/snitch.gif" /></div>
         <p>
           ¿Quieres sentirte como un auténtico buscador?<br />
           Pon a prueba tus habilidades en este simulador de Quidditch<br />
@@ -90,22 +91,21 @@
           Sé lo más rápido que puedas: huirá de ti cada vez que te acerques<br />
           Si lo consigues, descubrirás una curiosidad sobre ella
         </p>
-        <button class="btn-hp fontLogo" onclick="playSnitch()">JUGAR</button>
+        <div><button class="btn-hp fontLogo" onclick="playSnitch()">JUGAR</button></div>
       </div>
 
-      <div
-        class="container-fluid align-content-center menu py-4 none"
-        id="ganadorSnitch"
-      >
+      <div class="container py-4 menu none" id="ganadorSnitch">
         <h1 class="magicTitle fontLogo text-center">HAS GANADO</h1>
+        <div><img src="img/snitchWin.gif" class="img-fluid" /></div>
         <p id="curiosidad"></p>
-        <img src="img/snitchWin.gif" class="img-fluid" />
         <p class="text-center m-2">
           Descubre más detalles sobre la snitch atrapándola de nuevo:
         </p>
-        <button class="btn-hp fontLogo" onclick="playSnitch()">
-          JUGAR OTRA VEZ
-        </button>
+        <div>
+          <button class="btn-hp fontLogo" onclick="playSnitch()">
+            JUGAR OTRA VEZ
+          </button>
+        </div>
       </div>
     </div>
 

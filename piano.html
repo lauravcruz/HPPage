@@ -72,21 +72,21 @@
         </div>
       </div>
     </nav>
-    
-    <div class="container-fluid stars">
-      <div class="container menu" id="menuPiano">
+
+    <div class="container-fluid stars py-5 h-100" id="bgPiano">
+      <div class="container menu py-4" id="menuPiano">
         <h1 class="fontLogo magicTitle text-center">
           TOCA LA MELODÍA DE Harry Potter
         </h1>
-        <img src="img/piano.gif" class="py-4" />
-        <p>
+        <div class = "text-center"><img src="img/piano.gif" class="img-fluid py-4" /></div>
+        <p class="text-center">
           Reconócelo: por muy muggle que seas, esa canción pegadiza se ha colado
-          más de una vez en tu cabeza
+          más de una vez en tu cabeza<br />
+          En este juego podrás tocarla a piano incluso sin saber música
         </p>
-        <p>En este juego podrás tocarla a piano incluso sin saber música</p>
-        <button class="btn-hp fontLogo" onclick="startPiano()">JUGAR</button>
+        <div class ="text-center"><button class="btn-hp fontLogo" onclick="startPiano()">JUGAR</button></div>
       </div>
-      <div class="container text-center" id="partitura">
+      <div class="container text-center none" id="partitura">
         <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 La5 Fa#5</p>
         <p>Mi5 Sol5 Fa#5 Re5 Fa5 Si4</p>
         <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 Re6 Do#6 Do6</p>
@@ -99,7 +99,7 @@
         <p>Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6</p>
         <p>Sol5 Do#6 Do6 Si5 Si4 Sol5 Mi5</p>
       </div>
-      <div class="m-5" id="teclas">
+      <div class="m-5 none" id="teclas">
         <div class="border border-1 white" onclick="playPiano('Si4')">Si4</div>
         <div class="border border-1 white" onclick="playPiano('Do5')">Do5</div>
         <div
@@ -139,5 +139,8 @@
         </div>
       </div>
     </div>
+    <footer class="container-fluid bg-primary d-flex justify-content-center">
+      <p class="text-secondary">Harry Potter Page</p>
+    </footer>
   </body>
 </html>

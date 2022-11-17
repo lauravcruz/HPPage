@@ -1,6 +1,7 @@
 let menuSnitch = document.getElementById("menuSnitch");
 let snitch = document.getElementById("snitch");
 let bgSnitch = document.getElementById("bgSnitch");
+let ganadorSnitch = document.getElementById("ganadorSnitch");
 
 let curiosidades = [
   "La snitch tiene su origen en la cacería de snidgets dorados, animales similares a la actual pelota alada. En 1929 fueron insertados en el juego de Quidditch por el presidente del Consejo de Magos, Barberus Bragge, diciendo que regalaría 150 galeones (un millón de galeones en la actualidad) al que lograra atraparla en el transcurso del juego",
@@ -14,12 +15,21 @@ function playSnitch() {
   ganadorSnitch.classList.add("none");
   snitch.classList.remove("none");
   bgSnitch.classList.add("cursor");
+  bgSnitch.classList.remove("h-100"); 
+  bgSnitch.classList.add("alturaFija");
 
   if (screen.width < 960) {
     //Para el móvil, el juego es diferente: la snitch se mueve sola cada 400ms
     setInterval(function () {
       moveSnitch();
     }, 400);
+  } else {
+    //Cada vez que el ratón "entre" en el gif de la snitch, la movemos (tras 100 ms para que no sea imposible)
+    snitch.addEventListener("mouseenter", () =>
+      setTimeout(function () {
+        moveSnitch();
+      }, 200)
+    );
   }
 }
 
@@ -28,19 +38,12 @@ function moveSnitch() {
   snitch.style.top = Math.floor(Math.random() * 95) + "%";
   snitch.style.left = Math.floor(Math.random() * 70) + "%";
 }
-//Cada vez que el ratón "entre" en el gif de la snitch, la movemos (tras 100 ms para que no sea imposible)
-snitch.addEventListener("mouseenter", () =>
-  setTimeout(function () {
-    moveSnitch();
-  }, 200)
-);
 
 function catchedSnitch() {
-  let ganadorSnitch = document.getElementById("ganadorSnitch");
   snitch.classList.add("none");
   bgSnitch.classList.remove("cursor");
+  bgSnitch.classList.add("h-100");
   ganadorSnitch.classList.remove("none");
-  bgSnitch.style.height = "100%";
   document.getElementById("curiosidad").innerHTML =
     curiosidades[Math.floor(Math.random() * (4 - 0))];
 }
@@ -49,9 +52,12 @@ function startPiano() {
   let partitura = document.getElementById("partitura");
   let teclas = document.getElementById("teclas");
   let menuPiano = document.getElementById("menuPiano");
-  menuPiano.style.display = "none";
-  partitura.style.display = "block";
-  teclas.style.display = "flex";
+  let bgPiano = document.getElementById("bgPiano");
+  menuPiano.classList.add("none");
+  partitura.classList.remove("none");
+  teclas.classList.remove("none");
+  teclas.classList.add("d-flex");
+  bgPiano.classList.add("h100");
 }
 
 function playPiano(nota) {

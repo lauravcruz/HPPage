@@ -1,6 +1,7 @@
 let menuSnitch = document.getElementById("menuSnitch");
 let snitch = document.getElementById("snitch");
 let bgSnitch = document.getElementById("bgSnitch");
+
 let curiosidades = [
   "La snitch tiene su origen en la cacería de snidgets dorados, animales similares a la actual pelota alada. En 1929 fueron insertados en el juego de Quidditch por el presidente del Consejo de Magos, Barberus Bragge, diciendo que regalaría 150 galeones (un millón de galeones en la actualidad) al que lograra atraparla en el transcurso del juego",
   "El mago Bowman Wright del Valle de Godric inventó la snitch (o snitch dorada), la cual reemplazaría al 'snidget dorado', la única diferencia de ésta respecto a las demás es que fue hechizada para que se mueva solamente dentro del campo de juego; y desde entonces ésta es la que prevalece hasta nuestros días.",
@@ -10,19 +11,15 @@ let curiosidades = [
 
 function playSnitch() {
   menuSnitch.classList.add("none");
-  snitch.removeAttribute("hidden");
-  bgSnitch.style.cursor = "url('../img/cursor.png'), auto";
-  alert(screen.height);
+  ganadorSnitch.classList.add("none");
+  snitch.classList.remove("none");
+  bgSnitch.classList.add("cursor");
 
   if (screen.width < 960) {
     //Para el móvil, el juego es diferente: la snitch se mueve sola cada 400ms
-    
-    bgSnitch.style.height = screen.height + "px";
     setInterval(function () {
       moveSnitch();
     }, 400);
-  } else {
-    bgSnitch.style.height = screen.height + "px";
   }
 }
 
@@ -35,14 +32,15 @@ function moveSnitch() {
 snitch.addEventListener("mouseenter", () =>
   setTimeout(function () {
     moveSnitch();
-  }, 100)
+  }, 200)
 );
 
 function catchedSnitch() {
-  snitch.classList.add("none"); 
   let ganadorSnitch = document.getElementById("ganadorSnitch");
+  snitch.classList.add("none");
+  bgSnitch.classList.remove("cursor");
   ganadorSnitch.classList.remove("none");
-  bgSnitch.style.height = "100%"; 
+  bgSnitch.style.height = "100%";
   document.getElementById("curiosidad").innerHTML =
     curiosidades[Math.floor(Math.random() * (4 - 0))];
 }

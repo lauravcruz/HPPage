@@ -85,7 +85,7 @@ a:hover {
 /*animación para cambiar el fondo del juego*/
 #bgSnitch {
   width: 100%;
-  height: 100%;
+  height: 89vh;
   /*Relativa para que cuando la snitch se mueva lo haga dentro de este contenedor*/
   position: relative;
   background-size: cover;
@@ -125,8 +125,8 @@ a:hover {
   font-size: 1rem;
 }
 
-.none{
-  display: none; 
+.none {
+  display: none;
 }
 
 .magicTitle {
@@ -166,12 +166,13 @@ a:hover {
   position: absolute;
 }
 
-
+.cursor {
+  cursor: url("../img/cursor.png"), auto;
+}
 
 #curiosidad {
   margin-left: 2rem;
 }
-
 
 /*PIANO */
 
@@ -248,6 +249,11 @@ a:hover {
   text-shadow: black 1px 0 2px;
 }
 
+.carouselTitle h1 {
+  font-size: 2rem;
+  text-shadow: black 1px 0 2px;
+}
+
 .titleFriday {
   color: var(--grey);
   text-shadow: black 3px 0 2px;
@@ -266,13 +272,13 @@ a:hover {
     right: 0;
     top: 80%;
     height: 100%;
-    margin-top: 0; 
+    margin-top: 0;
     background-color: rgba(0, 0, 0, 0.353);
-    transition: top 1s;    
+    transition: top 1s;
   }
 
   .carousel-custom:hover {
-    top: 0; 
+    top: 0;
     justify-content: center;
   }
 
@@ -293,7 +299,6 @@ a:hover {
 
   .carousel-custom:hover h1 {
     font-size: 7rem;
-    
     transition: font-size 2s ease-in-out;
   }
 
@@ -305,10 +310,6 @@ a:hover {
   .magicTitle {
     font-size: 5rem;
     -webkit-text-stroke: 2px black;
-  }
-
-  #bgSnitch {
-    height: 100%;
   }
 
   .btn-hp {

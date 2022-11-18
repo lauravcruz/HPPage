@@ -275,6 +275,7 @@ a:hover {
 
 .houses{
   background-color: var(--background);
+  padding: 2rem; 
 }
 .houses .row:nth-child(1){
   background-image: url(../img/humocalidad.gif);
@@ -288,16 +289,14 @@ a:hover {
   text-shadow: yellow 1px 1px 2px;
 }
 
-.houses > * {
-  margin: 1.5rem;
-}
 
 .houses span{
   color: var(--griffindor)
 }
 
 .houses .presentacion{
-  border-radius: 5rem;
+  border-radius: 5rem; 
+  margin: 0; 
 }
 
 .houses .row:nth-child(2){
@@ -420,10 +419,6 @@ a:hover {
   }
 
   /*HOUSES*/
-
-  .houses > * {
-    margin: 1.5rem;
-  }
 
   .houses{
     font-size: 2.5rem;

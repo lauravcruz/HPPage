@@ -71,14 +71,14 @@ function startGif(personaje) {
   let cardPersonaje = document.getElementById(personaje);
 
   cardPersonaje.removeAttribute("src"); 
-  cardPersonaje.setAttribute("src", "../img/" + personaje + ".gif");
+  cardPersonaje.setAttribute("src", "./img/" + personaje + ".gif");
 }
 
 function stopGif(personaje){
   let cardPersonaje = document.getElementById(personaje);
 
   cardPersonaje.removeAttribute("src"); 
-  cardPersonaje.setAttribute("src", "../img/" + personaje + "Fija.jpg");
+  cardPersonaje.setAttribute("src", "./img/" + personaje + "Fija.jpg");
 }
 
 

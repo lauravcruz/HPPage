@@ -111,9 +111,10 @@ a:hover {
 }
 
 /* HOMEPAGE*/
-.home {
-  padding: 2rem;
+.home > *{
+  margin: 0;
 }
+
 
 /*ATRAPA LA SNITCH*/
 
@@ -273,14 +274,13 @@ a:hover {
 /*HOUSES*/
 
 .houses .row:nth-child(1){
-  background-image: url(/img/prueba.gif);
+  background-image: url(../img/humocalidad.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
 }
 .lema{
   font-family: "fontLogo";
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 2rem; 
   text-shadow: yellow 1px 1px 2px;
 }
@@ -289,13 +289,21 @@ a:hover {
   margin: 1.5rem;
 }
 
-.houses > div:first-child{
+.houses div{
   border-radius: 5rem;
+  background-color: var(--background);
 }
 
 .escudo{
   width: 34%;
+  margin-top: 3%;
 } 
+
+.elemento{
+  position: relative; 
+  background-image: url(../img/snitch.gif);
+  opacity: 0.5;
+}
 
 /*FOOTER*/
 
@@ -346,11 +354,11 @@ a:hover {
     padding: 0;
   }
 
-  .row:nth-child(2) {
+  .home .row:nth-child(2) {
     border: var(--brown) double 0.3rem;
     border-bottom: 0;
   }
-  .row:nth-child(3) {
+  .home .row:nth-child(3) {
     border: var(--brown) double 0.3rem;
     border-top: 0;
   }

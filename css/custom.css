@@ -298,7 +298,7 @@ a:hover {
   margin: 0; 
 }
 
-.houses .row:nth-child(2){
+.descripcion{
   background-color: var(--secondary);
   border: double var(--griffindor) 1rem; 
 }
@@ -340,6 +340,53 @@ a:hover {
   font-size: smaller;
 }
 
+.room{
+  height: 370px;
+	margin: auto;
+	width: 200px;
+	-webkit-perspective: 700; 
+}
+
+.card3D {
+	height: 100%;
+	width: 100%;
+	transition: all 1s;
+	transform-style: preserve-3d;
+	box-shadow: 0px 0px 5px black;
+}
+
+.card3D:hover{
+  transform: rotateY(180deg);
+}
+
+.side{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+   background: #F0F0F0;
+  backface-visibility: hidden;
+}
+
+.back{
+	height: 100%;
+	width: 100%;
+  transform: rotateY(180deg);
+}
+
+.sala{
+  background-image: url("../img/stars.gif");
+}
+
+.sala h2{
+  color: white; 
+}
+.claves{
+  color:white;
+  animation-name: titulo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  text-shadow: rgb(5, 28, 63) 1px 0 10px;
+}
 
 /*FOOTER*/
 
@@ -435,6 +482,7 @@ a:hover {
 
   .escudo{
     width: auto;
+    margin: 2%; 
   }
 
 }

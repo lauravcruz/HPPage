@@ -15,7 +15,7 @@ function playSnitch() {
   ganadorSnitch.classList.add("none");
   snitch.classList.remove("none");
   bgSnitch.classList.add("cursor");
-  bgSnitch.classList.remove("h-100"); 
+  bgSnitch.classList.remove("h-100");
   bgSnitch.classList.add("alturaFija");
 
   if (screen.width < 960) {
@@ -64,3 +64,21 @@ function playPiano(nota) {
   let sonido = new Audio("notas/" + nota + ".wav");
   sonido.play();
 }
+
+/*HOUSES*/
+
+function startGif(personaje) {
+  let cardPersonaje = document.getElementById(personaje);
+
+  cardPersonaje.removeAttribute("src"); 
+  cardPersonaje.setAttribute("src", "../img/" + personaje + ".gif");
+}
+
+function stopGif(personaje){
+  let cardPersonaje = document.getElementById(personaje);
+
+  cardPersonaje.removeAttribute("src"); 
+  cardPersonaje.setAttribute("src", "../img/" + personaje + "Fija.jpg");
+}
+
+

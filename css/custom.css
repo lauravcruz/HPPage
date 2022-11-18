@@ -273,6 +273,9 @@ a:hover {
 
 /*HOUSES*/
 
+.houses{
+  background-color: var(--background);
+}
 .houses .row:nth-child(1){
   background-image: url(../img/humocalidad.gif);
   background-repeat: no-repeat;
@@ -289,9 +292,17 @@ a:hover {
   margin: 1.5rem;
 }
 
-.houses div{
+.houses span{
+  color: var(--griffindor)
+}
+
+.houses .presentacion{
   border-radius: 5rem;
-  background-color: var(--background);
+}
+
+.houses .row:nth-child(2){
+  background-color: var(--secondary);
+  border: double var(--griffindor) 1rem; 
 }
 
 .escudo{
@@ -300,10 +311,31 @@ a:hover {
 } 
 
 .elemento{
-  position: relative; 
-  background-image: url(../img/snitch.gif);
-  opacity: 0.5;
+  background-color: var(--griffindor);
 }
+
+.elemento:hover{
+  background-image: url(../img/fuego2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  width: 22rem;
+  text-align: center;
+  border-top-left-radius: 22rem;
+  border-top-right-radius: 22rem;
+  border: var(--griffindor) inset 1rem;
+  background-color: var(--secondary);
+}
+.card:hover{
+  box-shadow: var(--secondary) 0 0 2rem;
+}
+.card img {
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+}
+
 
 /*FOOTER*/
 
@@ -391,6 +423,10 @@ a:hover {
 
   .houses > * {
     margin: 1.5rem;
+  }
+
+  .houses{
+    font-size: 2.5rem;
   }
 
   .lema{

@@ -86,20 +86,19 @@
         </p>
         <div class ="text-center"><button class="btn-hp fontLogo" onclick="startPiano()">JUGAR</button></div>
       </div>
-      <div class="container text-center none" id="partitura">
-        <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 La5 Fa#5</p>
-        <p>Mi5 Sol5 Fa#5 Re5 Fa5 Si4</p>
-        <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 Re6 Do#6 Do6</p>
-        <p>La5 Do6 Si5 La#5 Si4 Sol5 Mi5</p>
+
+      <div class="container-fluid text-center d-none" id="partitura">
+        <Mi5>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 La5 Fa#5 | Mi5 Sol5 Fa#5 Re5 Fa5 Si4</p>
+        <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 Re6 Do#6 Do6 | La5 Do6 Si5 La#5 Si4 Sol5 Mi5</p>
         <p>
           Sol5 Si5 | Sol5 Si5 | Sol5 Do6 | Si5 La#5 | Sol5 Fa#5 Do6 Si5 Si4 Sol5
           Do6
         </p>
-        <p>Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6</p>
-        <p>Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6</p>
+        <p>Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6 | Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6</p>
         <p>Sol5 Do#6 Do6 Si5 Si4 Sol5 Mi5</p>
       </div>
-      <div class="m-5 none" id="teclas">
+
+      <div class="container-fluid d-none" id="teclas">
         <div class="border border-1 white" onclick="playPiano('Si4')">Si4</div>
         <div class="border border-1 white" onclick="playPiano('Do5')">Do5</div>
         <div

@@ -16,6 +16,9 @@
   --light: #efeee9;
   --griffindor: #740001;
   --slytherin: #194529;
+  --hufflepuff: #f3de0b;
+  --ravenclaw: #0b304a;
+  --ravenclaw2: #a67a53;
 }
 
 body {
@@ -77,6 +80,27 @@ a:hover {
   background-color: black;
   color: var(--grey);
   text-shadow: var(--slytherin) 1px 0 5px;
+}
+
+.hufflepuff {
+  background-color: var(--hufflepuff);
+  color: black;
+}
+
+.hufflepuff:hover {
+  background-color: black;
+  color: var(--hufflepuff);
+  text-shadow: --hufflepuff 1px 0 5px;
+}
+.ravenclaw {
+  background-color: var(--ravenclaw);
+  color: var(--ravenclaw2);
+}
+
+.ravenclaw:hover {
+  background-color: var(--ravenclaw2);
+  color: var(--ravenclaw);
+  text-shadow: var(--ravenclaw) 1px 0 5px;
 }
 
 /*CAROUSEL*/
@@ -161,10 +185,6 @@ a:hover {
 
 .menu > * {
   margin: 0.5rem;
-}
-
-.none {
-  display: none;
 }
 
 .magicTitle {
@@ -273,12 +293,10 @@ a:hover {
 /*HOUSES*/
 
 .houses {
-  padding-top: 2rem;
   background-color: var(--background);
-  margin: 0;
 }
 
-.houses p{
+.houses p {
   font-size: 1rem;
   padding: 0.3rem;
 }
@@ -297,11 +315,6 @@ a:hover {
 .houses span {
   color: var(--griffindor);
   text-shadow: white 0px 0px 50px;
-}
-
-.houses .presentacion {
-  border-radius: 5rem;
-  margin: 0;
 }
 
 .descripcion {
@@ -393,11 +406,11 @@ a:hover {
   text-shadow: rgb(255, 255, 255) 0px 0 4px;
 }
 
-.sala h3{
+.sala h3 {
   font-size: 1.2rem;
 }
 
-.claves p{
+.claves p {
   cursor: pointer;
   color: white;
   font-size: 2rem;
@@ -423,6 +436,10 @@ a:hover {
     text-shadow: rgb(255, 255, 255) 0px 0 30px;
     transform: translateY(5px);
   }
+}
+
+.personajes img {
+  border: var(--griffindor) 1rem solid;
 }
 
 /*FOOTER*/
@@ -509,12 +526,12 @@ a:hover {
 
   /*HOUSES*/
 
-  .houses { 
-    padding: 2rem; 
+  .houses p {
+    font-size: 2rem;
   }
 
-  .houses p{
-    font-size: 2rem;
+  .presentacion {
+    border-radius: 5rem;
   }
 
   .lema {
@@ -526,7 +543,7 @@ a:hover {
     margin: 2%;
   }
 
-  .sala h3{
+  .sala h3 {
     font-size: 2.2rem;
   }
 }

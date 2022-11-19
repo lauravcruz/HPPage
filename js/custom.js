@@ -11,9 +11,9 @@ let curiosidades = [
 ];
 
 function playSnitch() {
-  menuSnitch.classList.add("none");
-  ganadorSnitch.classList.add("none");
-  snitch.classList.remove("none");
+  menuSnitch.classList.add("d-none");
+  ganadorSnitch.classList.add("d-none");
+  snitch.classList.remove("d-none");
   bgSnitch.classList.add("cursor");
   bgSnitch.classList.remove("h-100");
   bgSnitch.classList.add("alturaFija");
@@ -40,10 +40,10 @@ function moveSnitch() {
 }
 
 function catchedSnitch() {
-  snitch.classList.add("none");
+  snitch.classList.add("d-none");
   bgSnitch.classList.remove("cursor");
   bgSnitch.classList.add("h-100");
-  ganadorSnitch.classList.remove("none");
+  ganadorSnitch.classList.remove("d-none");
   document.getElementById("curiosidad").innerHTML =
     curiosidades[Math.floor(Math.random() * (4 - 0))];
 }
@@ -53,9 +53,9 @@ function startPiano() {
   let teclas = document.getElementById("teclas");
   let menuPiano = document.getElementById("menuPiano");
   let bgPiano = document.getElementById("bgPiano");
-  menuPiano.classList.add("none");
-  partitura.classList.remove("none");
-  teclas.classList.remove("none");
+  menuPiano.classList.add("d-none");
+  partitura.classList.remove("d-none");
+  teclas.classList.remove("d-none");
   teclas.classList.add("d-flex");
   bgPiano.classList.add("h100");
 }

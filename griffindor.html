@@ -74,9 +74,11 @@
         </p>
       </div>
 
-      <div class="container-fluid row d-flex align-items-center m-0 descripcion">
+      <div
+        class="container-fluid row d-flex align-items-center p-lg-4 p-0 descripcion"
+      >
         <div class="col-lg-8 col-sm-12 text-center text-lg-start">
-          <p class="text-body p-4">
+          <p class="text-body p-lg-4 py-sm-2">
             Gryffindor es una de las cuatro casas del Colegio Hogwarts de Magia
             y Hechicería. Su animal emblemático es el <span>león</span> y su
             elemento el <span>fuego</span>. Los colores son el rojo escarlata y
@@ -85,8 +87,8 @@
           </p>
         </div>
 
-        <div class="col-lg-4 col-sm-12 text-center elemento">
-          <img src="img/leon.png" class="py-3 img-fluid" />
+        <div class="col-lg-4 col-sm-12 text-center elemento p-0 m-0">
+          <img src="img/leon.png" class="img-fluid" />
         </div>
       </div>
 
@@ -146,8 +148,26 @@
         </div>
       </div>
 
-      <div class="row sala">
+      <div class="row sala p-lg-5 p-1">
         <h2 class="display-1">Sala común</h2>
+        <p class="textoSala">
+          La sala común de Gryffindor está localizada en la
+          <span>Torre de Gryffindor</span>. Es una gran sala llena de grandes
+          armarios, mesas, y un pizarrón donde los estudiantes encuentran
+          noticias, anuncios, avisos de pérdida, etc. Una ventana mira hacia
+          afuera, a los terrenos del castillo, y una gran chimenea domina la
+          pared. Es muy reconfortante y los estudiantes de Gryffindor se reúnen
+          para estudiar, celebrar o relajarse.
+          <br />
+          La entrada está localizada en el séptimo piso y está custodiada por el
+          retrato de la <span>Dama Gorda</span>, que utiliza un vestido rosa.
+          Ella permite la entrada solamente si la clave es la correcta.
+        </p>
+        <h2 class="text-secondary">
+          A continuación encontrarás algunas de las claves para entrar en la
+          sala común de Gryffindor. ¡Púlsalas para que la Dama Gorda te deje
+          entrar!
+        </h2>
         <div class="row d-flex justify-content-center text-center p-lg-5">
           <div class="col-lg-3 col-12 d-flex my-3">
             <div class="room">
@@ -164,26 +184,26 @@
           <div
             class="col-lg-3 col-12 container-fluid d-flex flex-column justify-content-center claves"
           >
-            <p>ALOMOHORA</p>
-            <p>&nbsp</p>
-            <p>ALOMOHORA</p>
-            <p>&nbsp</p>
+            <p onclick="entry()">Somormujo</p>
+            <p class="d-sm-none d-lg-block">&nbsp</p>
+            <p onclick="entry()">Tonterías</p>
+            <p class="d-sm-none d-lg-block">&nbsp</p>
           </div>
           <div
-            class="col-lg-3 col-12 container-fluid d-flex flex-column justify-content-center"
+            class="col-lg-3 col-12 container-fluid d-flex flex-column justify-content-center claves"
           >
-            <p>&nbsp</p>
-            <p>ALOMOHORA</p>
-            <p>&nbsp</p>
-            <p>ALOMOHORA</p>
+            <p class="d-sm-none d-lg-block">&nbsp</p>
+            <p onclick="entry()">Oddsbodikins</p>
+            <p class="d-sm-none d-lg-block">&nbsp</p>
+            <p onclick="entry()">Vil bellaco</p>
           </div>
           <div
-            class="col-lg-3 col-12 container-fluid d-flex flex-column justify-content-center"
+            class="col-lg-3 col-12 container-fluid d-flex flex-column justify-content-center claves"
           >
-            <p>ALOMOHORA</p>
-            <p>&nbsp</p>
-            <p>ALOMOHORA</p>
-            <p>&nbsp</p>
+            <p onclick="entry()">Fortuna major</p>
+            <p class="d-sm-none d-lg-block">&nbsp</p>
+            <p onclick="entry()">Dilligrout</p>
+            <p class="d-sm-none d-lg-block">&nbsp</p>
           </div>
         </div>
       </div>

@@ -70,15 +70,22 @@ function playPiano(nota) {
 function startGif(personaje) {
   let cardPersonaje = document.getElementById(personaje);
 
-  cardPersonaje.removeAttribute("src"); 
+  cardPersonaje.removeAttribute("src");
   cardPersonaje.setAttribute("src", "./img/" + personaje + ".gif");
 }
 
-function stopGif(personaje){
+function stopGif(personaje) {
   let cardPersonaje = document.getElementById(personaje);
 
-  cardPersonaje.removeAttribute("src"); 
+  cardPersonaje.removeAttribute("src");
   cardPersonaje.setAttribute("src", "./img/" + personaje + "Fija.jpg");
 }
 
-
+function entry() {
+  let cuadro = document.getElementsByClassName("card3D");
+  if (cuadro[0].classList.contains("card3DHOVER")) {
+    cuadro[0].classList.remove("card3DHOVER");
+  } else {
+    cuadro[0].classList.add("card3DHOVER");
+  }
+}

@@ -275,6 +275,7 @@ a:hover {
 .houses {
   padding-top: 2rem;
   background-color: var(--background);
+  margin: 0;
 }
 
 .houses p{

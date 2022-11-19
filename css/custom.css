@@ -273,8 +273,13 @@ a:hover {
 /*HOUSES*/
 
 .houses {
+  padding-top: 2rem;
   background-color: var(--background);
-  padding: 2rem;
+}
+
+.houses p{
+  font-size: 1rem;
+  padding: 0.3rem;
 }
 .houses .row:nth-child(1) {
   background-image: url(../img/humocalidad.gif);
@@ -285,7 +290,7 @@ a:hover {
   font-family: "fontLogo";
   font-size: 1.5rem;
   margin-top: 2rem;
-  text-shadow: yellow 1px 1px 2px;
+  text-shadow: yellow 1px 1px 20px;
 }
 
 .houses span {
@@ -341,7 +346,7 @@ a:hover {
 }
 
 .textoSala {
-  color: rgb(156, 150, 150);
+  color: var(--light);
   font-size: 2rem;
 }
 
@@ -383,18 +388,24 @@ a:hover {
 }
 
 .sala h2 {
-  color: white;
+  color: var(--secondary);
+  text-shadow: rgb(255, 255, 255) 0px 0 4px;
 }
 
-.claves p:nth-child(odd) {
+.sala h3{
+  font-size: 1.2rem;
+}
+
+.claves p{
   cursor: pointer;
   color: white;
+  font-size: 2rem;
+}
+.claves p:nth-child(odd) {
   animation: textShadow 1.8s infinite ease-in-out;
 }
 
 .claves p:nth-child(even) {
-  cursor: pointer;
-  color: white;
   animation: textShadow 1.8s infinite ease-in-out;
 }
 
@@ -497,8 +508,12 @@ a:hover {
 
   /*HOUSES*/
 
-  .houses {
-    font-size: 2.5rem;
+  .houses { 
+    padding: 2rem; 
+  }
+
+  .houses p{
+    font-size: 2rem;
   }
 
   .lema {
@@ -508,6 +523,10 @@ a:hover {
   .escudo {
     width: auto;
     margin: 2%;
+  }
+
+  .sala h3{
+    font-size: 2.2rem;
   }
 }
 

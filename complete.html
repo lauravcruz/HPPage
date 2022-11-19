@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HPAGE</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script defer src="js/bootstrap.bundle.js"></script>
+    <script defer src="js/custom.js"></script>
+  </head>
+  <body>
+    <!--navbar: está diseñado para móvil. Con expand-lg le indicamos que en ordenador se expanda el menú--->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand text-secondary fontLogo" href="index.html"
+          >Harry Potter</a
+        >
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-secondary"
+                href="piano.html"
+                aria-current="page"
+                >Piano<span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="snitch.html"
+                >Atrapa la snitch dorada</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link text-secondary"
+                href="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Descubre las casas</a
+              >
+              <div class="dropdown-menu py-0" aria-labelledby="dropdownId">
+                <a class="dropdown-item griffindor" href="#">Gryffindor</a>
+                <a class="dropdown-item slytherin" href="#">Slytherin</a>
+                <a class="dropdown-item hufflepuff" href="#">Hufflepuff</a>
+                <a class="dropdown-item ravenclaw" href="#">Ravenclaw</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="container-fluid d-grid p-5 justify-content-center bg-light registro"
+    >
+      <form action="piano.html">
+        <div class="form-group d-flex flex-column text-center p-3">
+          <label for="name">Nombre</label>
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Hermione"
+            required
+          />
+        </div>
+        <div class="form-group d-flex flex-column text-center p-3">
+          <label for="apellido">Apellido</label>
+          <input
+            type="text"
+            name="apellido"
+            id="apellido"
+            placeholder="Granger"
+          />
+        </div>
+
+        <div class="form-group d-flex flex-column text-center p-3">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="harry@hogwarts.com"
+            required
+          />
+        </div>
+
+        <div class="form-group text-center p-3">
+          <label for="casa">Seleciona tu casa favorita</label>
+          <select class="form-select" id="casa" required>
+            <option>Gryffindor</option>
+            <option>Slytherin</option>
+            <option>Hufflepuff</option>
+            <option>Ravenclaw</option>
+          </select>
+        </div>
+        <div
+          class="form-group form-check d-flex flex-row align-items-center justify-content-center muggle"
+        >
+          <input
+            type="checkbox"
+            class="form-check-input p-0 m-0"
+            id="muggle"
+            required
+          />
+          <label class="form-check-label m-3" for="muggle"
+            >No soy un muggle</label
+          >
+          <img src="img/recaptcha-logo.png" />
+        </div>
+
+        <div class="d-flex justify-content-center p-3">
+          <button type="submit" class="fontLogo btn-hp p-2" id="alohomora">
+            ALOHOMORA
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="container-fluid bg-primary d-flex justify-content-center">
+      <p class="text-secondary">Harry Potter Page</p>
+    </footer>
+  </body>
+</html>

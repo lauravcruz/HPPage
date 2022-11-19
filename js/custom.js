@@ -89,3 +89,23 @@ function entry() {
     cuadro[0].classList.add("card3DHOVER");
   }
 }
+
+let input = document.querySelectorAll("input");
+let email = document.querySelector("input[type = email]");
+
+for (let i = 0; i < input.length; i++) {
+  input[i].addEventListener("focus", function () {
+    input[i].classList.add("focus");
+  });
+  input[i].addEventListener("blur", () => input[i].classList.remove("focus"));
+}
+
+email.addEventListener("change", function () {
+  if (!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+    email.classList.add("error");
+  } else {
+    email.classList.remove("error");
+  }
+});
+
+

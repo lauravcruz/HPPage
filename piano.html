@@ -78,66 +78,74 @@
         <h1 class="fontLogo magicTitle text-center">
           TOCA LA MELODÍA DE Harry Potter
         </h1>
-        <div class = "text-center"><img src="img/piano.gif" class="img-fluid py-4" /></div>
+        <div class="text-center">
+          <img src="img/piano.gif" class="img-fluid py-4" />
+        </div>
         <p class="text-center">
           Reconócelo: por muy muggle que seas, esa canción pegadiza se ha colado
           más de una vez en tu cabeza<br />
           En este juego podrás tocarla a piano incluso sin saber música
         </p>
-        <div class ="text-center"><button class="btn-hp fontLogo" onclick="startPiano()">JUGAR</button></div>
+        <div class="text-center">
+          <button class="btn-hp fontLogo" onclick="startPiano()">JUGAR</button>
+        </div>
       </div>
 
       <div class="container-fluid text-center d-none" id="partitura">
-        <Mi5>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 La5 Fa#5 | Mi5 Sol5 Fa#5 Re5 Fa5 Si4</p>
-        <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 Re6 Do#6 Do6 | La5 Do6 Si5 La#5 Si4 Sol5 Mi5</p>
+        <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 La5 Fa#5 | Mi5 Sol5 Fa#5 Re5 Fa5 Si4</p>
+        <p>
+          Si4 Mi5 Sol5 Fa#5 Mi5 Si5 Re6 Do#6 Do6 | La5 Do6 Si5 La#5 Si4 Sol5 Mi5
+        </p>
         <p>
           Sol5 Si5 | Sol5 Si5 | Sol5 Do6 | Si5 La#5 | Sol5 Fa#5 Do6 Si5 Si4 Sol5
           Do6
         </p>
-        <p>Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6 | Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6</p>
+        <p>
+          Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6 | Sol5 B5 | Sol5 Si5| Sol#5 Re6
+          Do#6 Do6
+        </p>
         <p>Sol5 Do#6 Do6 Si5 Si4 Sol5 Mi5</p>
       </div>
-
-      <div class="container-fluid d-none" id="teclas">
-        <div class="border border-1 white" onclick="playPiano('Si4')">Si4</div>
-        <div class="border border-1 white" onclick="playPiano('Do5')">Do5</div>
-        <div
-          class="border border-1 black"
-          id="do5"
-          onclick="playPiano('DoSos5')"
-        >
-          Do#5
-        </div>
-        <div class="border border-1 white" onclick="playPiano('Re5')">Re5</div>
-        <div class="border border-1 black" onclick="playPiano('ReSos5')">
-          Re#5
-        </div>
-        <div class="border border-1 white" onclick="playPiano('Mi5')">Mi5</div>
-        <div class="border border-1 white" onclick="playPiano('Fa5')">Fa5</div>
-        <div class="border border-1 black" onclick="playPiano('FaSos5')">
-          Fa#5
-        </div>
-        <div class="border border-1 white" onclick="playPiano('Sol5')">
-          Sol5
-        </div>
-        <div class="border border-1 black" onclick="playPiano('SolSos5')">
-          Sol#5
-        </div>
-        <div class="border border-1 white" onclick="playPiano('La5')">La5</div>
-        <div class="border border-1 black" onclick="playPiano('LaSos5')">
-          La#5
-        </div>
-        <div class="border border-1 white" onclick="playPiano('Si5')">Si5</div>
-        <div class="border border-1 white" onclick="playPiano('Do6')">Do6</div>
-        <div class="border border-1 black" onclick="playPiano('DoSos6')">
-          Do#6
-        </div>
-        <div class="border border-1 white" onclick="playPiano('Re6')">Re6</div>
-        <div class="border border-1 black" onclick="playPiano('ReSos6')">
-          Re#6
-        </div>
+      <div class="container-fluid d-flex justify-content-around pt-5">
+        <ul class="d-none" id="teclas">
+          <li class="border border-1 white" id = "Si4" onclick="playPiano('Si4')">a<br>Si4</li>
+          <li class="border border-1 white" onclick="playPiano('Do5')">s<br>Do5</li>
+          <li class="border border-1 white" onclick="playPiano('Re5')">d<br>Re5</li>
+          <li class="border border-1 black" onclick="playPiano('DoSos5')">S<br>Do#5</li>
+          <li class="border border-1 white" onclick="playPiano('Mi5')">f<br>Mi5</li>
+          <li class="border border-1 black" onclick="playPiano('ReSos5')">D<br>Re#5</li>
+          <li class="border border-1 white" onclick="playPiano('Fa5')">g<br>Fa5</li>
+          <li class="border border-1 white" onclick="playPiano('Sol5')">h<br>
+            Sol5
+          </li>          
+          <li class="border border-1 black" onclick="playPiano('FaSos5')">G<br>Fa#5</li>
+          <li class="border border-1 white" onclick="playPiano('La5')">j<br>La5</li>
+          
+         
+          <li class="border border-1 black" onclick="playPiano('SolSos5')">
+            H<br>Sol#5
+          </li>
+          <li class="border border-1 white" onclick="playPiano('Si5')">k<br>Si5</li>
+          <li class="border border-1 black" onclick="playPiano('LaSos5')">
+            J<br>La#5
+          </li>
+          <li class="border border-1 white" onclick="playPiano('Do6')">l<br>Do6</li>
+          
+          <li class="border border-1 white white" onclick="playPiano('Re6')">
+            ñ<br>Re6
+          </li>
+          <li class="border border-1 black" onclick="playPiano('DoSos6')">
+            L<br>Do#6
+          </li>
+          <li class="border border-1 white white">
+          </li>
+          <li class="border border-1 black" onclick="playPiano('ReSos6')">
+            Ñ<br>Re#6
+          </li>
+        </ul>
       </div>
     </div>
+
     <footer class="container-fluid bg-primary d-flex justify-content-center">
       <p class="text-secondary">Harry Potter Page</p>
     </footer>

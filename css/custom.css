@@ -246,34 +246,50 @@ a:hover {
   padding-top: 1rem;
   padding-bottom: 10%;
 }
+
 #teclas {
-  margin-top: 10%;
-  background-color: #07255184;
-  padding: 1rem 0;
-  box-shadow: var(--grey) 1px 1px 50px 1px;
+  position: relative;
+  border: black 2px solid;  
+  text-align: center;
+  box-shadow: var(--grey) 0 0 5rem; 
+  padding-left: 0; 
+}
+.white,
+.black {
+  position: relative;
+  float: left;
+  display: flex;
   justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+  border: black 1px solid; 
 }
 
-#teclas > * {
-  text-align: center;
+.white {
+  height: 15rem;
+  width: 5rem;
+  z-index: 1;
+  border-radius: 0 0 5px 5px;
+  background-color: white;
+  color: black;
 }
 
 .black {
-  height: 10rem;
-  width: 3.5rem;
+  height: 9rem;
+  width: 2.5rem;
+  margin-left: -6.1rem;
+  z-index: 2;
   background-color: black;
-  color: white;
+  color: white; 
+  font-size: 1.3rem;
 }
 
-#teclas .white {
-  height: 20rem;
-  background-color: white;
-  width: 5rem;
+.white:hover {
+  background: linear-gradient(to bottom, white 0%, #d3d3d3);
 }
 
-.white:hover,
-.black:hover {
-  box-shadow: var(--secondary) 1px 1px 10px 1px;
+.black:hover{
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #767575);
 }
 
 #partitura {
@@ -444,34 +460,35 @@ a:hover {
 
 /* REGISTER */
 
-.registro input, label{
+.registro input,
+label {
   font-size: 1.5rem;
   color: var(--primary);
 }
 
-.registro label{
+.registro label {
   text-shadow: var(--secondary) 1px 0 10px;
 }
-.muggle{
-  background-color:#f9f9f9;
-	border:2px solid #d3d3d3;
-	border-radius:5px;
-	color:#4c4a4b;
+.muggle {
+  background-color: #f9f9f9;
+  border: 2px solid #d3d3d3;
+  border-radius: 5px;
+  color: #4c4a4b;
 }
-.muggle label{
-  font-size: 0.8rem;
+.muggle label {
+  font-size: 1rem;
 }
-.focus{
+.focus {
   box-shadow: var(--secondary) 0px 0px 6px 0px;
 }
-#alohomora{
+#alohomora {
   font-size: 2rem;
 }
-.error{
+.error {
   box-shadow: red 0px 0px 6px 0px;
 }
 
-form p{
+form p {
   font-size: 1rem;
 }
 /*FOOTER*/
@@ -580,14 +597,11 @@ form p{
   }
 
   /*FORM*/
-  form p{
+  form p {
     font-size: 1.5rem;
   }
 
-  .muggle label{
-    font-size: 1.5rem; 
+  .muggle label {
+    font-size: 1.5rem;
   }
-}
-
-@media (min-width: 576px) {
 }

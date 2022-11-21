@@ -51,6 +51,7 @@ function catchedSnitch() {
 /*HOUSES*/
 
 function startGif(personaje) {
+  /*Esta función hace que el GIF comience (en los personajes del apartado de las casas)*/
   let cardPersonaje = document.getElementById(personaje);
 
   cardPersonaje.removeAttribute("src");
@@ -65,6 +66,7 @@ function stopGif(personaje) {
 }
 
 function entry() {
+  /*Cuando el usuario clica una contraseña mágica, el cuadro da la vuelta*/
   let cuadro = document.getElementsByClassName("card3D");
   if (cuadro[0].classList.contains("card3DHOVER")) {
     cuadro[0].classList.remove("card3DHOVER");

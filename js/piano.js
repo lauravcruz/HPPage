@@ -1,20 +1,30 @@
-function startPiano() {
-  let partitura = document.getElementById("partitura");
+/*Este documento javascript es para el juego del piano*/
+function startPiano(tipo) {
+  if (tipo == "notas") {
+    let partitura = document.getElementById("partitura");
+    partitura.classList.remove("d-none");
+  } else {
+    let partituraLetra = document.getElementById("partituraLetra");
+    partituraLetra.classList.remove("d-none");
+  }
+
   let teclas = document.getElementById("teclas");
   let menuPiano = document.getElementById("menuPiano");
   let bgPiano = document.getElementById("bgPiano");
   menuPiano.classList.add("d-none");
-  partitura.classList.remove("d-none");
+
   teclas.classList.remove("d-none");
   bgPiano.classList.add("h100");
 }
 
 function playPiano(nota) {
+  /*El html nos pasa por parámetro una nota musical que hacemos sonar*/
   let sonido = new Audio("notas/" + nota + ".wav");
   sonido.play();
 }
 
 document.addEventListener("keydown", (event) => {
+  /*Para jugar con el teclado, asociamos un caracter a una de las notas del piano:*/
   if (event.key.match(/[asSdDfgGhHjJklLñÑ]/)) {
     let teclado = [
       { key: "a", nota: "Si4" },
@@ -36,6 +46,8 @@ document.addEventListener("keydown", (event) => {
       { key: "Ñ", nota: "ReSos6" },
     ];
 
+    /*Con find encontramos qué nota es qué tecla del teclado y así reutilizamos la función 
+    que usamos cuando jugamos con el ratón*/
     let clave = teclado.find((clave) => clave.key == event.key);
     playPiano(clave.nota);
   }

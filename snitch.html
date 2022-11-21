@@ -41,14 +41,6 @@
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active text-secondary"
-                href="#"
-                aria-current="page"
-                >Trucos<span class="visually-hidden">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
               <a class="nav-link text-secondary" href="snitch.html"
                 >Atrapa la snitch dorada</a
               >
@@ -64,21 +56,37 @@
                 >Descubre las casas</a
               >
               <div class="dropdown-menu py-0" aria-labelledby="dropdownId">
-                <a class="dropdown-item griffindor" href="#">Griffindor</a>
+                <a class="dropdown-item griffindor" href="griffindor.html"
+                  >Gryffindor</a
+                >
+                <!--Solo he hecho la de Gryffindor, las demas sería el mismo html pero cambiando contenido-->
                 <a class="dropdown-item slytherin" href="#">Slytherin</a>
+                <a class="dropdown-item hufflepuff" href="#">Hufflepuff</a>
+                <a class="dropdown-item ravenclaw" href="#">Ravenclaw</a>
               </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-secondary"
+                href="register.html"
+                aria-current="page"
+                >Suscripción<span class="visually-hidden">(current)</span></a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container-fluid align-content-center py-5 text-center" id="bgSnitch">
+    <div
+      class="container-fluid align-content-center py-5 text-center"
+      id="bgSnitch"
+    >
+      <!--Cuando el usuario pincha en la snitch, ha ganado-->
       <img
         src="img/snitch.gif"
         id="snitch"
         class="d-none"
-        ;
         onclick="catchedSnitch()"
       />
       <div class="container py-4 menu h-100" id="menuSnitch">
@@ -91,7 +99,9 @@
           Sé lo más rápido que puedas: huirá de ti cada vez que te acerques<br />
           Si lo consigues, descubrirás una curiosidad sobre ella
         </p>
-        <div><button class="btn-hp fontLogo" onclick="playSnitch()">JUGAR</button></div>
+        <div>
+          <button class="btn-hp fontLogo" onclick="playSnitch()">JUGAR</button>
+        </div>
       </div>
 
       <div class="container py-4 menu d-none" id="ganadorSnitch">

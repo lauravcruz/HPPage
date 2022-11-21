@@ -42,14 +42,6 @@
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active text-secondary"
-                href="#"
-                aria-current="page"
-                >Trucos<span class="visually-hidden">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
               <a class="nav-link text-secondary" href="snitch.html"
                 >Atrapa la snitch dorada</a
               >
@@ -65,9 +57,22 @@
                 >Descubre las casas</a
               >
               <div class="dropdown-menu py-0" aria-labelledby="dropdownId">
-                <a class="dropdown-item griffindor" href="#">Griffindor</a>
+                <a class="dropdown-item griffindor" href="griffindor.html"
+                  >Gryffindor</a
+                >
+                <!--Solo he hecho la de Gryffindor, las demas sería el mismo html pero cambiando contenido-->
                 <a class="dropdown-item slytherin" href="#">Slytherin</a>
+                <a class="dropdown-item hufflepuff" href="#">Hufflepuff</a>
+                <a class="dropdown-item ravenclaw" href="#">Ravenclaw</a>
               </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active text-secondary"
+                href="register.html"
+                aria-current="page"
+                >Suscripción<span class="visually-hidden">(current)</span></a
+              >
             </li>
           </ul>
         </div>
@@ -88,11 +93,16 @@
           En este juego podrás tocarla a piano incluso sin saber música
         </p>
         <div class="text-center">
-          <button class="btn-hp fontLogo" onclick="startPiano()">JUGAR</button>
+          <button class="btn-hp fontLogo" onclick="startPiano('notas')">
+            JUGAR CON NOTAS
+          </button>
+          <button class="btn-hp fontLogo" onclick="startPiano('letras')">
+            JUGAR CON LETRAS
+          </button>
         </div>
       </div>
 
-      <div class="container-fluid text-center d-none" id="partitura">
+      <div class="container-fluid text-center d-none partitura" id="partitura">
         <p>Si4 Mi5 Sol5 Fa#5 Mi5 Si5 La5 Fa#5 | Mi5 Sol5 Fa#5 Re5 Fa5 Si4</p>
         <p>
           Si4 Mi5 Sol5 Fa#5 Mi5 Si5 Re6 Do#6 Do6 | La5 Do6 Si5 La#5 Si4 Sol5 Mi5
@@ -102,46 +112,81 @@
           Do6
         </p>
         <p>
-          Sol5 B5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6 | Sol5 B5 | Sol5 Si5| Sol#5 Re6
-          Do#6 Do6
+          Sol5 Si5 | Sol5 Si5| Sol#5 Re6 Do#6 Do6 | Sol5 Si5 | Sol5 Si5| Sol#5
+          Re6 Do#6 Do6
         </p>
         <p>Sol5 Do#6 Do6 Si5 Si4 Sol5 Mi5</p>
       </div>
+
+      <div
+        class="container-fluid text-center d-none partitura"
+        id="partituraLetra"
+      >
+        <p>a f h G f k j G / f h G d g a / a f h G f k ñ L l / j l k J a h f</p>
+        <p>
+          h k / h k / h l / k J / h G l k a h l / h k / h k / H ñ L l / h k / h
+          k / H ñ L l
+        </p>
+        <p>h L l k a h f</p>
+      </div>
+
       <div class="container-fluid d-flex justify-content-around pt-5">
         <ul class="d-none" id="teclas">
-          <li class="border border-1 white" id = "Si4" onclick="playPiano('Si4')">a<br>Si4</li>
-          <li class="border border-1 white" onclick="playPiano('Do5')">s<br>Do5</li>
-          <li class="border border-1 white" onclick="playPiano('Re5')">d<br>Re5</li>
-          <li class="border border-1 black" onclick="playPiano('DoSos5')">S<br>Do#5</li>
-          <li class="border border-1 white" onclick="playPiano('Mi5')">f<br>Mi5</li>
-          <li class="border border-1 black" onclick="playPiano('ReSos5')">D<br>Re#5</li>
-          <li class="border border-1 white" onclick="playPiano('Fa5')">g<br>Fa5</li>
-          <li class="border border-1 white" onclick="playPiano('Sol5')">h<br>
+          <!--Cada elemento de la lista tiene asociada una nota musical-->
+          <li class="border border-1 white" id="Si4" onclick="playPiano('Si4')">
+            a<br />Si4
+          </li>
+          <li class="border border-1 white" onclick="playPiano('Do5')">
+            s<br />Do5
+          </li>
+          <li class="border border-1 white" onclick="playPiano('Re5')">
+            d<br />Re5
+          </li>
+          <li class="border border-1 black" onclick="playPiano('DoSos5')">
+            S<br />Do#5
+          </li>
+          <li class="border border-1 white" onclick="playPiano('Mi5')">
+            f<br />Mi5
+          </li>
+          <li class="border border-1 black" onclick="playPiano('ReSos5')">
+            D<br />Re#5
+          </li>
+          <li class="border border-1 white" onclick="playPiano('Fa5')">
+            g<br />Fa5
+          </li>
+          <li class="border border-1 white" onclick="playPiano('Sol5')">
+            h<br />
             Sol5
-          </li>          
-          <li class="border border-1 black" onclick="playPiano('FaSos5')">G<br>Fa#5</li>
-          <li class="border border-1 white" onclick="playPiano('La5')">j<br>La5</li>
-          
-         
+          </li>
+          <li class="border border-1 black" onclick="playPiano('FaSos5')">
+            G<br />Fa#5
+          </li>
+          <li class="border border-1 white" onclick="playPiano('La5')">
+            j<br />La5
+          </li>
+
           <li class="border border-1 black" onclick="playPiano('SolSos5')">
-            H<br>Sol#5
+            H<br />Sol#5
           </li>
-          <li class="border border-1 white" onclick="playPiano('Si5')">k<br>Si5</li>
+          <li class="border border-1 white" onclick="playPiano('Si5')">
+            k<br />Si5
+          </li>
           <li class="border border-1 black" onclick="playPiano('LaSos5')">
-            J<br>La#5
+            J<br />La#5
           </li>
-          <li class="border border-1 white" onclick="playPiano('Do6')">l<br>Do6</li>
-          
+          <li class="border border-1 white" onclick="playPiano('Do6')">
+            l<br />Do6
+          </li>
+
           <li class="border border-1 white white" onclick="playPiano('Re6')">
-            ñ<br>Re6
+            ñ<br />Re6
           </li>
           <li class="border border-1 black" onclick="playPiano('DoSos6')">
-            L<br>Do#6
+            L<br />Do#6
           </li>
-          <li class="border border-1 white white">
-          </li>
+          <li class="border border-1 white white"></li>
           <li class="border border-1 black" onclick="playPiano('ReSos6')">
-            Ñ<br>Re#6
+            Ñ<br />Re#6
           </li>
         </ul>
       </div>

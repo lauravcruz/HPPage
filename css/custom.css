@@ -292,7 +292,7 @@ a:hover {
   background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #767575);
 }
 
-#partitura {
+.partitura {
   color: white;
   text-shadow: var(--secondary) 1px 0 5px;
   animation-name: titulo;
